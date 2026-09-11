@@ -95,12 +95,12 @@ plt.title('Mean Average by Hometown')
 plt.xlabel('Hometown')
 plt.ylabel('Average Score');
 ```
-**Interpretations**
-Mean Average by Track - Among the tracks observed in this dataset, students in the Communication track have the highest sample mean average.
+### **Interpretations**
+* **Mean Average by Track** - Among the tracks observed in this dataset, students in the Communication track have the highest sample mean average.
 
-Mean Average by Gender - Between the genders in this dataset, Male students have the highest sample mean average.
+* **Mean Average by Gender** - Between the genders in this dataset, Male students have the highest sample mean average.
 
-Mean Average by Hometown - Across the hometowns in this dataset, students from Luzon have the highest sample mean average.
+* **Mean Average by Hometown** - Across the hometowns in this dataset, students from Luzon have the highest sample mean average.
 
 **Thank you for reading!**
 
