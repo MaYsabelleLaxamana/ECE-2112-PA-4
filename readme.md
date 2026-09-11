@@ -45,9 +45,8 @@ VisFemale = df.loc[(df['Hometown'] == 'Visayas') & (df['Gender'] == 'Female'), [
 
 VisFemale 
 ```
-VisFemale[VisFemale['Average'] >= 60]
 ```python
-
+VisFemale[VisFemale['Average'] >= 60]
 ```
 ### C. CATEGORY-AVERAGE VISUALIZATION
 Compute the mean board exam average across three categorical features (Track, Gender, and Hometown) and display the summary tables. Create a figure containing three correctly labeled bar charts to visually compare the highest-performing groups.
@@ -96,9 +95,16 @@ plt.title('Mean Average by Hometown')
 plt.xlabel('Hometown')
 plt.ylabel('Average Score');
 ```
+**Interpretations**
+Mean Average by Track - Among the tracks observed in this dataset, students in the Communication track have the highest sample mean average.
+
+Mean Average by Gender - Between the genders in this dataset, Male students have the highest sample mean average.
+
+Mean Average by Hometown - Across the hometowns in this dataset, students from Luzon have the highest sample mean average.
+
 **Thank you for reading!**
 
-To access the full Python code for Programming Assignment 4, download the file from this link: [link]. To execute the code, open the file in Jupyter Notebook and run all the cells.
+To access the full Python code for Programming Assignment 4, download the file from this link: https://github.com/MaYsabelleLaxamana/ECE-2112-PA-4/blob/main/LAXAMANA_PA4.ipynb. To execute the code, open the file in Jupyter Notebook and run all the cells.
 
 **README file Version History:**
 
