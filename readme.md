@@ -60,6 +60,8 @@ Compute the mean board exam average across three categorical features (Track, Ge
 * **`plt.subplot()`** - used to partition the main figure into a 1x3 grid, allowing the three distinct bar charts to be displayed neatly side-by-side.
 * **`plt.bar()`** - used to construct the actual bar charts by passing the categorical data as the x-axis and the mean averages as the y-axis, along with the custom colors. 
 * **`plt.title()`. `plt.xlabel()`, `plt.ylabel()`** - used to assign clear, readable text labels to the axes and headers of every single graph.
+* **`plt.subplots_adjust()`** - used to create an extra space at the bottom of the graphic.
+* **`fig.text()`** - used to embed the interpretation statements directly into the bottom of the figure graphic.
 * **Semicolon (`;`)** - appended to the final line of each subplot block to suppress the default Matplotlib text output in Jupyter Notebook.
 
 ```python
@@ -75,32 +77,43 @@ display(hometown_mean)
 ```
 
 ```python
-plt.figure(figsize=(20, 5))
+fig = plt.figure(figsize=(20, 5))
 
+#First Chart: Track
 plt.subplot(1, 3, 1) 
 plt.bar(track_mean['Track'], track_mean['Average'], color='skyblue')
 plt.title('Mean Average by Track')
 plt.xlabel('Track')
 plt.ylabel('Average Score');
 
+#Second Chart: Gender
 plt.subplot(1, 3, 2)
 plt.bar(gender_mean['Gender'], gender_mean['Average'], color='red')
 plt.title('Mean Average by Gender')
 plt.xlabel('Gender')
 plt.ylabel('Average Score');
 
+#Third Chart: Hometown
 plt.subplot(1, 3, 3)
 plt.bar(hometown_mean['Hometown'], hometown_mean['Average'], color='pink')
 plt.title('Mean Average by Hometown')
 plt.xlabel('Hometown')
 plt.ylabel('Average Score');
+
+plt.subplots_adjust(bottom=0.35)
+
+fig.text(0.08, 0.20, "1. Track: Among the tracks observed in this dataset, students in the Communication track have the highest sample mean average.", fontsize=10);
+fig.text(0.08, 0.13, "2. Gender: Between the genders in this dataset, Male students have the highest sample mean average.", fontsize=10);
+fig.text(0.08, 0.06, "3. Hometown: Across the hometowns in this dataset, students from Luzon have the highest sample mean average.", fontsize=10);
+
+plt.show();
 ```
 ### **Interpretations**
-* **Mean Average by Track** - Among the tracks observed in this dataset, students in the Communication track have the highest sample mean average.
+* **Track** - Among the tracks observed in this dataset, students in the Communication track have the highest sample mean average.
 
-* **Mean Average by Gender** - Between the genders in this dataset, Male students have the highest sample mean average.
+* **Gender** - Between the genders in this dataset, Male students have the highest sample mean average.
 
-* **Mean Average by Hometown** - Across the hometowns in this dataset, students from Luzon have the highest sample mean average.
+* **Hometown** - Across the hometowns in this dataset, students from Luzon have the highest sample mean average.
 
 **Thank you for reading!**
 
@@ -109,5 +122,6 @@ To access the full Python code for Programming Assignment 4, download the file f
 **README file Version History:**
 
 * **September 11, 2026** - Initial README output uploaded.
+* **September 17, 2026** - Added format tweaks to the code and the README file.
 
 
